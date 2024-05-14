@@ -1,0 +1,356 @@
+import React, { useState, useContext } from "react";
+import axios from "axios";
+import baseUrl from "../../../utils/baseUrl";
+import { toast } from "react-toastify";
+import { UserContext } from "../../../context/context";
+import Footer from "../../Footer/Footer";
+import { Modal, Avatar } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
+
+const Register = () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [number, setNumber] = useState("");
+  const [commpref1, setCommpref1] = useState("");
+  const [commpref2, setCommpref2] = useState("");
+  const [commpref3, setCommpref3] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [isVeg, setIsVeg] = useState("");
+  const [ok, SetOk] = useState(false);
+  const [state, setState] = useContext(UserContext);
+  const [image, setImage] = useState({});
+  const [uploading, setUploading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post(`${baseUrl}/delegates/register`, {
+        firstname,
+        lastname,
+        email,
+        password,
+        number,
+        commpref1,
+        commpref2,
+        commpref3,
+        isVeg,
+        image,
+      });
+      SetOk(data.ok);
+      setFirstname("");
+      setLastName("");
+      setEmail("");
+      setPassword("");
+      setNumber("");
+      setCommpref1("");
+      setCommpref2("");
+      setCommpref3("");
+      setIsVeg("");
+      setImage({});
+    } catch (err) {
+      toast.error(err.response.data);
+    }
+  };
+
+  const handleImage = async (e) => {
+    const file = e.target.files[0];
+
+    if (file.size > 204800) {
+      alert("The file size exceeds 200kb. Please reduce the file size.");
+      e.target.value = "";
+    } else {
+      let formData = new FormData();
+      formData.append("image", file);
+      // console.log([...formData]);
+      setUploading(true);
+      try {
+        const { data } = await axios.post(
+          `${baseUrl}/delegates/upload-image`,
+          formData
+        );
+        setImage({
+          url: data.url,
+          public_id: data.public_id,
+        });
+        setUploading(false);
+      } catch (err) {
+        console.log(err);
+        setUploading(false);
+      }
+    }
+  };
+
+  const options = [
+    {
+      label: "",
+      value: "",
+    },
+    {
+      label: "United Nations Security Council (UNSC)",
+      value: "unsc",
+    },
+    {
+      label: "United Nations Human Rights Council (UNHRC)",
+      value: "unhrc",
+    },
+    {
+      label: "Disarmament and International Security Committee (DISEC)",
+      value: "disec",
+    },
+    {
+      label: "NATO: Futuristic Affairs (F-NATO)",
+      value: "fnato",
+    },
+    {
+      label: "Commission on the Status of Women (CSW)",
+      value: "csw",
+    },
+    {
+      label: "The Historic Committee on Cuban Affairs (HCC)",
+      value: "hcc",
+    },
+    {
+      label: "Organization of Islamic Cooperation (OIC)",
+      value: "oic",
+    },
+    {
+      label: "Commission on Crime Prevention and Criminal Justice (CCPC)",
+      value: "ccpc",
+    },
+    {
+      label: "International Press (IP)",
+      value: "ip",
+    },
+    {
+      label: "Federal Parliament of Nepal (FPN)",
+      value: "fpn",
+    },
+  ];
+
+  const redirect = () => {
+    window.location.href = "/";
+  };
+
+  return (
+    <>
+      <div className="min-h-screen text-gray-900 flex justify-center">
+        <div className="max-w-screen-xl m-0 sm:m-10 flex justify-center flex-1">
+          <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+            <div>
+              <img
+                src="https://i.ibb.co/Yh8R0Yd/mitini-MUN-logo.jpg"
+                className="w-32 mx-auto"
+              />
+            </div>
+            <div className="mt-5 flex flex-col items-center">
+              <h1 className="text-xl xl:text-2xl font-bold">Register!</h1>
+              <div className="w-full flex-1 mt-8">
+                <form className="mx-auto max-w-xs" onSubmit={handleSubmit}>
+                  <input
+                    name="firstname"
+                    value={firstname}
+                    onChange={(e) => setFirstname(e.target.value)}
+                    className="w-full px-6 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    type="text"
+                    placeholder="First Name"
+                    required
+                  />
+                  <input
+                    name="lastname"
+                    value={lastname}
+                    onChange={(e) => setLastName(e.target.value)}
+                    className="mt-5 w-full px-6 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    type="text"
+                    placeholder="Last Name"
+                    required
+                  />
+                  <input
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="mt-5 w-full px-6 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    type="email"
+                    placeholder="Email"
+                    required
+                  />
+                  
+                  <input
+                    name="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="mt-5 w-full px-6 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    type="password"
+                    placeholder="Password"
+                    required
+                  />
+                  <span className="text-sm">Password will be used to login later on.</span>
+                  <input
+                    name="number"
+                    value={number}
+                    onChange={(e) => setNumber(e.target.value)}
+                    className="mt-5 w-full px-6 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    type="number"
+                    placeholder="Phone Number"
+                    required
+                  />
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-5 mb-2"
+                    for="grid-state"
+                  >
+                    Committee Preference 1
+                  </label>
+                  <div className="">
+                    <select
+                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="grid-state"
+                      onChange={(e) => setCommpref1(e.target.value)}
+                      name="commpref1"
+                      required
+                    >
+                      {options.map((option) => (
+                        <option value={option.value}>{option.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-5 mb-2"
+                    for="grid-state"
+                  >
+                    Committee Preference 2
+                  </label>
+                  <div className="">
+                    <select
+                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="grid-state"
+                      onChange={(e) => setCommpref2(e.target.value)}
+                      name="commpref1"
+                      required
+                    >
+                      {options.map((option) => (
+                        <option value={option.value}>{option.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-5 mb-2"
+                    for="grid-state"
+                  >
+                    Committee Preference 3
+                  </label>
+                  <div className="">
+                    <select
+                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="grid-state"
+                      onChange={(e) => setCommpref3(e.target.value)}
+                      name="commpref3"
+                      required
+                    >
+                      {options.map((option) => (
+                        <option value={option.value}>{option.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-5 mb-2"
+                    for="grid-state"
+                  >
+                    Are you a vegeterian?
+                  </label>
+                  <div className=" mb-4">
+                    <select
+                      className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="grid-state"
+                      onChange={(e) => setIsVeg(e.target.value)}
+                      required
+                    >
+                      <option value=""></option>
+                      <option value="true">Yes</option>
+                      <option value="false">No</option>
+                    </select>
+                  </div>
+                  <span className="text-gray-700 font-bold text-sm">
+                    The payment fee is NRS.3500. You <b>MUST</b> write your full
+                    name and phone number in the "Remarks" section while
+                    processing the payment and upload a screenshot of the
+                    transaction down below. You will only be acknowledged as a
+                    delegate when we are able to verify your payment.
+                  </span>
+                  <img
+                    className="pt-4"
+                    src="https://i.ibb.co/yWQbp7G/IMG-7206.jpg"
+                    alt=""
+
+                  />
+                  <span className="text-sm pt-4">
+                    Upload a screenshot of your transaction here: (<b>NOTE:</b>{" "}
+                    the image size must be 200kb, reduce the image size and
+                    upload it.)
+                  </span>
+                  <div className="pb-4"> 
+                    {image && image.url ? (
+                      <Avatar className="mt-1" size={30} src={image.url} />
+                    ) : uploading ? (
+                      <LoadingOutlined className="mt-2" />
+                    ) : (
+                      <input
+                        type="file"
+                        accept="images/*"
+                        onChange={handleImage}
+                        required
+                      />
+                    )}
+                  </div>
+                  <label className="block text-gray-500 font-semibold">
+                    <input
+                      className="mr-2 leading-tight"
+                      type="checkbox"
+                      required
+                    />
+                    <span className="text-sm">I agree with Mitini MUN's <a className="underline text-mitini" href="/tandc">Terms and Conditions</a>.</span>
+                  </label>
+                  {uploading ? (
+                    <span className="text-sm">Wait the file is uploading!</span>
+                  ) : (
+                    <button
+                      onSubmit={handleSubmit}
+                      className="mt-3 tracking-wide font-semibold bg-mitini text-gray-100 w-full py-2 rounded-lg hover:bg-rose-600 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                    >
+                      <span className="ml-2">Register</span>
+                    </button>
+                  )}
+                  {/* <button
+                    onSubmit={handleSubmit}
+                    className="mt-3 tracking-wide font-semibold bg-mitini text-gray-100 w-full py-2 rounded-lg hover:bg-rose-600 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                  >
+                    <span className="ml-2">Register</span>
+                  </button> */}
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Modal
+            title="Success!"
+            visible={ok}
+            onCancel={() => SetOk(false)}
+            footer={null}
+          >
+            <p>
+              You have successfully registered. After some time you will be able
+              to login using the email and password you have used to register.
+              We will give you the updates on our instagram page: @mitini.mun
+            </p>
+          </Modal>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default Register;
