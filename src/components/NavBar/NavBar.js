@@ -173,7 +173,7 @@ const NavBar = () => {
               ))}
             </>
           )}
-          {isLoggedIn ? (
+          {state !== null ? (
             <button
               onClick={logout}
               className="bg-gray-400 text-white py-2 px-4 transition-all duration-300 rounded hover:bg-red-200"

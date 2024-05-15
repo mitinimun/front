@@ -20,7 +20,7 @@ const Sponsors = () => {
       img: "https://i.ibb.co/sRBFrNS/Whats-App-Image-2024-05-06-at-16-51-04-4f4703ad-removebg-preview.png",
       title: "Solu Hydropower Limited",
       description:
-        "We are thanful to Solu Hydropower Limited for sponsoring us in this cause.",
+        "We are thankful to Solu Hydropower Limited for sponsoring us in this cause.",
     },
   ];
 
