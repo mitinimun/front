@@ -25,7 +25,7 @@ const OC = () => {
       img: "https://i.ibb.co/fS6dxBn/marketing.jpg",
       title: "The Marketing Team",
       description:
-        "Meet our stellar Marketing Team for this Model United Nations (MUN) conference. Their innovative strategies will ensure a successful and impactful event!",
+        "Meet our stellar Marketing Team! The innovative behind-the-scene strategists who have been building an outstanding digital image of Mitini MUN.",
       link: "/marketing",
     },
     {
@@ -44,7 +44,7 @@ const OC = () => {
     },
     {
       img: "https://i.ibb.co/bJ5V97g/PHOTO.jpg",
-      title: "The Photographers Team",
+      title: "The Photography Team",
       description:
         "Say hello to our talented photographers capturing every moment of this Model United Nations (MUN) conference. Their lens will bring our event to life!",
       link: "/photo",
@@ -71,14 +71,24 @@ const OC = () => {
             celebrate their dedication and hard work!
           </p>
           {/* Secretary Generals */}
-          <div className="flex justify-center pb-16">
+          <div className="md:flex justify-center pb-16 hidden">
             <div className="container">
-              <div className="flex flex-row pb-16">
+              <div className="md:flex flex-row pb-16">
                 <div className="basis-1/4"></div>
                 {SecGenData.map((item, index) => (
                   <OCcard key={index} img={item.img} {...item} />
                 ))}
                 <div className="basis-1/4"></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:hidden flex justify-center pb-16">
+            <div className="container">
+              <div className="grid grid-cols-1">
+                {SecGenData.map((item, index) => (
+                  <OCcard key={index} img={item.img} {...item} />
+                ))}
               </div>
             </div>
           </div>

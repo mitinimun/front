@@ -14,7 +14,7 @@ const Daffairs = () => {
 
           <div className="flex justify-center">
             <div className="container">
-              <div className="flex flex-row pb-16">
+              <div className="md:flex flex-row pb-16 hidden">
                 <div className="basis-1/4"></div>
                 <div className="pb-10 basis-1/2">
                   <div className="overflow-hidden">
@@ -29,17 +29,44 @@ const Daffairs = () => {
                       Abhilokeet Sherchan
                     </h1>
                     <p className="font-serif text-neutral-700">
-                      Introducing Abhilokeet, the epitome of fun and goodness! With a
-                      smile that brightens rooms and a good heart, Abhilokeet is
-                      everyone's favorite person to be around. He's always up
-                      for a good time, whether it's cracking jokes, exploring
-                      new places, or simply lending a listening ear to friends
-                      in need. His positivity and genuine caring nature make him
-                      a true joy to know and befriend.
+                      Introducing Abhilokeet, the epitome of fun and goodness!
+                      With a smile that brightens rooms and a good heart,
+                      Abhilokeet is everyone's favorite person to be around.
+                      He's always up for a good time, whether it's cracking
+                      jokes, exploring new places, or simply lending a listening
+                      ear to friends in need. His positivity and genuine caring
+                      nature make him a true joy to know and befriend.
                     </p>
                   </div>
                 </div>
                 <div className="basis-1/4"></div>
+              </div>
+
+              {/* small */}
+              <div className="md:hidden flex flex-row pb-16">
+                <div className="pb-10 grid grid-cols-1">
+                  <div className="overflow-hidden">
+                    <img
+                      src="https://i.ibb.co/gF5prvW/ABHILOKEET.jpg"
+                      className="mx-auto h-[100%] w-[100%]"
+                      alt=""
+                    />
+                  </div>
+                  <div className="space-y-1 p-3">
+                    <h1 className="line-clamp-1 font-semibold text-xl font-serif text-neutral-700">
+                      Abhilokeet Sherchan
+                    </h1>
+                    <p className="font-serif text-neutral-700">
+                      Introducing Abhilokeet, the epitome of fun and goodness!
+                      With a smile that brightens rooms and a good heart,
+                      Abhilokeet is everyone's favorite person to be around.
+                      He's always up for a good time, whether it's cracking
+                      jokes, exploring new places, or simply lending a listening
+                      ear to friends in need. His positivity and genuine caring
+                      nature make him a true joy to know and befriend.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <div className="grid grids-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-16">

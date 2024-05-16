@@ -4,7 +4,7 @@ import { IoLocationSharp } from "react-icons/io5";
 const SponsorCard = ({ Img, title, location, description, price, type }) => {
   return (
     <>
-    <div className="shadow-lg transition-all duration-500 hover:shadow-xl cursor-pointer">
+    <div className="shadow-lg transition-all duration-500 hover:shadow-xl cursor-pointer pb-5">
       <div className="overflow-hidden">
         <img
           src={Img}

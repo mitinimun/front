@@ -31,12 +31,6 @@ const Sponsors = () => {
       description: "Swastik adhfjadlkfjadlkfjalkdjf;lakdf",
     },
     {
-      img: "https://i.ibb.co/HCm3fYB/pran.png",
-      title: "Pran",
-      description:
-        "dflkajdfkljad;lfkja;dklfja;lkdjflkadjf akldjfl;kadjf;lkadjfl",
-    },
-    {
       img: "https://i.ibb.co/Yb1t48h/jimbu.png",
       title: "Jimbu Thakali",
       description:
@@ -55,8 +49,15 @@ const Sponsors = () => {
     },
   ];
 
+  const SupportingData = [
+    {
+      img: "https://i.ibb.co/VxX5cDJ/pran.png",
+      title: "Pran"
+    }
+  ]
+
   return (
-    <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto">
+    <div className="md:px-16 px-4 py-16 max-w-screen-2xl mx-auto">
       <div className="text-center my-8">
         <h2 className="text-4xl text-neutral-500 font-semibold mb-2">
           Our Sponsors
@@ -65,7 +66,7 @@ const Sponsors = () => {
           We are thankful for your support in this cause.
         </p>
         {/* company logos */}
-        <div className="flex justify-center pb-10">
+        <div className="flex justify-center pb-16">
           <div className="container">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {SponsorsData.map((item, index) => (
@@ -75,12 +76,34 @@ const Sponsors = () => {
           </div>
         </div>
 
-        <div className="flex justify-center pb-10">
+        
+        <h2 className="text-4xl text-neutral-500 font-semibold ">
+          Our Associate Sponsors
+        </h2>
+        <div className="flex justify-center pb-16">
           <div className="container">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {AssociateData.map((item, index) => (
                 <AssociateCard key={index} Img={item.img} {...item} />
               ))}
+            </div>
+          </div>
+        </div>
+
+
+        <h2 className="text-4xl text-neutral-500 font-semibold pb-4">
+          Our Supporting Sponsor
+        </h2>
+        <div className="flex justify-center pb-10">
+          <div className="container">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+              <div></div>
+              <div></div>
+              {SupportingData.map((item, index) => (
+                <AssociateCard key={index} Img={item.img} {...item} />
+              ))}
+              <div></div>
+              <div></div>
             </div>
           </div>
         </div>

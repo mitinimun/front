@@ -7,7 +7,7 @@ const Hero = () => {
 
   return (
     <div >
-      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
+      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen pb-10">
         <div className="w-full mx-auto">
           <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
             <div>

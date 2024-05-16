@@ -63,7 +63,7 @@ const NavBar = () => {
             className="text-2xl font-semibold flex items-center space-x-3"
           >
             <img
-              src="https://i.ibb.co/yWZpdDB/lg-removebg.png"
+              src="https://i.ibb.co/8jHc79Y/mitini-MUN-logo-Photoroom-png-Photoroom.png"
               alt=""
               className="w-20 inline-block items-center"
             />

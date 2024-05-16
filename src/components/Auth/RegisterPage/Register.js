@@ -135,7 +135,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="min-h-screen text-gray-900 flex justify-center">
+      <div className="min-h-screen text-gray-900 flex justify-center pt-10">
         <div className="max-w-screen-xl m-0 sm:m-10 flex justify-center flex-1">
           <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div>
@@ -175,7 +175,7 @@ const Register = () => {
                     placeholder="Email"
                     required
                   />
-                  
+
                   <input
                     name="password"
                     value={password}
@@ -185,7 +185,9 @@ const Register = () => {
                     placeholder="Password"
                     required
                   />
-                  <span className="text-sm">Password will be used to login later on.</span>
+                  <span className="text-sm">
+                    Password will be used to login later on.
+                  </span>
                   <input
                     name="number"
                     value={number}
@@ -208,6 +210,7 @@ const Register = () => {
                       onChange={(e) => setCommpref1(e.target.value)}
                       name="commpref1"
                       required
+                      value={commpref1}
                     >
                       {options.map((option) => (
                         <option value={option.value}>{option.label}</option>
@@ -227,6 +230,7 @@ const Register = () => {
                       onChange={(e) => setCommpref2(e.target.value)}
                       name="commpref1"
                       required
+                      value={commpref2}
                     >
                       {options.map((option) => (
                         <option value={option.value}>{option.label}</option>
@@ -246,6 +250,7 @@ const Register = () => {
                       onChange={(e) => setCommpref3(e.target.value)}
                       name="commpref3"
                       required
+                      value={commpref3}
                     >
                       {options.map((option) => (
                         <option value={option.value}>{option.label}</option>
@@ -264,6 +269,7 @@ const Register = () => {
                       id="grid-state"
                       onChange={(e) => setIsVeg(e.target.value)}
                       required
+                      value={isVeg}
                     >
                       <option value=""></option>
                       <option value="true">Yes</option>
@@ -271,44 +277,29 @@ const Register = () => {
                     </select>
                   </div>
                   <span className="text-gray-700 font-bold text-sm">
-                    The payment fee is NRS.3500. You <b>MUST</b> write your full
-                    name and phone number in the "Remarks" section while
-                    processing the payment and upload a screenshot of the
-                    transaction down below. You will only be acknowledged as a
-                    delegate when we are able to verify your payment.
+                    The payment fee is NRS.3200. You <b className="text-gray-700">MUST</b> write your full name
+                    and phone number in the "Remarks" section while processing
+                    the payment and send us the screenshot of the transaction to
+                    our email: mitinimunreg@gmail.com
                   </span>
                   <img
                     className="pt-4"
                     src="https://i.ibb.co/yWQbp7G/IMG-7206.jpg"
                     alt=""
-
                   />
-                  <span className="text-sm pt-4">
-                    Upload a screenshot of your transaction here: (<b>NOTE:</b>{" "}
-                    the image size must be 200kb, reduce the image size and
-                    upload it.)
-                  </span>
-                  <div className="pb-4"> 
-                    {image && image.url ? (
-                      <Avatar className="mt-1" size={30} src={image.url} />
-                    ) : uploading ? (
-                      <LoadingOutlined className="mt-2" />
-                    ) : (
-                      <input
-                        type="file"
-                        accept="images/*"
-                        onChange={handleImage}
-                        required
-                      />
-                    )}
-                  </div>
                   <label className="block text-gray-500 font-semibold">
                     <input
                       className="mr-2 leading-tight"
                       type="checkbox"
                       required
                     />
-                    <span className="text-sm">I agree with Mitini MUN's <a className="underline text-mitini" href="/tandc">Terms and Conditions</a>.</span>
+                    <span className="text-sm">
+                      I agree with Mitini MUN's{" "}
+                      <a className="underline text-mitini" href="/tandc">
+                        Terms and Conditions
+                      </a>
+                      .
+                    </span>
                   </label>
                   {uploading ? (
                     <span className="text-sm">Wait the file is uploading!</span>

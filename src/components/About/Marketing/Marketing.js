@@ -14,7 +14,7 @@ const Marketing = () => {
 
           <div className="flex justify-center">
             <div className="container">
-              <div className="flex flex-row pb-6">
+              <div className="md:flex flex-row pb-6 hidden">
                 <div className="basis-1/4"></div>
                 <div className="pb-10 basis-1/2">
                   <div className="overflow-hidden">
@@ -46,6 +46,39 @@ const Marketing = () => {
                   </div>
                 </div>
                 <div className="basis-1/4"></div>
+              </div>
+
+              {/* small */}
+              <div className="md:hidden flex flex-row pb-6">
+                <div className="grid grid-cols-1 pb-10">
+                  <div className="overflow-hidden">
+                    <img
+                      src="https://i.ibb.co/M2nkSND/PRATYUSH.jpg"
+                      className="mx-auto h-[100%] w-[100%]"
+                      alt=""
+                    />
+                  </div>
+                  <div className="space-y-1 p-3">
+                    <h1 className="line-clamp-1 font-semibold text-xl font-serif text-neutral-700">
+                      Pratyush Joshi
+                    </h1>
+                    <p className="font-serif text-neutral-700">
+                      Introducing Pratyush Joshi, or perhaps only Joshi. That’s
+                      what all his friends call him by, may it be in Nepal, The
+                      Netherlands or South Africa. There are two particular
+                      reasons for this, one: its obvious, and two: because he’s
+                      full of ‘Josh’. He’s got this lively energy that draws
+                      people in, not forgetting his delightful humor, of course
+                      (although, his laughter is more funnier than his joke).
+                      And beyond his vibrant personality, Joshi is the kind of
+                      person you'd want on your team, let it be a project, a
+                      startup, a school election, or even a Model United
+                      Nations. He's a natural leader who puts his all into every
+                      endeavor, ensuring that the journey, if not the outcome,
+                      is a resounding success.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <div className="grid grids-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-16 pb-6">

@@ -59,7 +59,7 @@ const Committee = () => {
         "With an open agenda, the IP aims to shed light on the diverse perspective of the delegates and scrutinize the global affairs the committees shall deal with in the sessions. Through professional journalism, the IP seeks to hear the unheard, to inform the uninformed. In alignment with the principles of the  Fourth State, the IP functions independently, devoid of any form of bias or prejudice. As a beacon of spreading information and upholding the truth. The IP invites and encourages delegates to engage and share their ideas while analyzing and questioning everybody on and off the scene.",
     },
     {
-      img: "https://i.ibb.co/TkrnJ2M/7.png",
+      img: "https://i.ibb.co/ng5hTrX/5.png",
       title: "Federal Parliament of Nepal",
       description:
         "The Federal Parliament of Nepal’s agenda on the privatization of government land and property aspires to examine the crucial subject of employing state-owned assets to foster economic development and growth. This committee will investigate potential highlights, hurdles, and moral implications of privatization. Delegates must work together to develop comprehensive solutions that align with the interests of the state and its citizenry by means of careful research and strategic planning. It is required of the delegates to conduct in-depth investigation and assessment, as well as conscientiously consider opposing perspectives, to craft judicious policies. ",

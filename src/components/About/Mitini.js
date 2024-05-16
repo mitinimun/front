@@ -8,7 +8,7 @@ const Mitini = () => {
       <div className="container pb-10 pt-20">
         <div className="flex justify-center">
           <div className="grid md:grid-cols-2">
-            <img src={logo} alt="" />
+            <img src="https://i.ibb.co/yWZpdDB/lg-removebg.png" alt="" />
             <div>
               <h1 className="my-8 py-2 pl-2 text-3xl font-bold">
                 What is Mitini?
