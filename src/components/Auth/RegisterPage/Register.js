@@ -25,6 +25,7 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const { data } = await axios.post(`${baseUrl}/delegates/register`, {
         firstname,
@@ -49,8 +50,10 @@ const Register = () => {
       setCommpref3("");
       setIsVeg("");
       setImage({});
+      setLoading(false);
     } catch (err) {
       toast.error(err.response.data);
+      setLoading(false);
     }
   };
 
@@ -277,7 +280,8 @@ const Register = () => {
                     </select>
                   </div>
                   <span className="text-gray-700 font-bold text-sm">
-                    The payment fee is NRS.3200. You <b className="text-gray-700">MUST</b> write your full name
+                    The payment fee is NRS.3200. You{" "}
+                    <b className="text-gray-700">MUST</b> write your full name
                     and phone number in the "Remarks" section while processing
                     the payment and send us the screenshot of the transaction to
                     our email: mitinimunreg@gmail.com
@@ -301,16 +305,13 @@ const Register = () => {
                       .
                     </span>
                   </label>
-                  {uploading ? (
-                    <span className="text-sm">Wait the file is uploading!</span>
-                  ) : (
-                    <button
-                      onSubmit={handleSubmit}
-                      className="mt-3 tracking-wide font-semibold bg-mitini text-gray-100 w-full py-2 rounded-lg hover:bg-rose-600 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
-                    >
-                      <span className="ml-2">Register</span>
-                    </button>
-                  )}
+                  <button
+                    onSubmit={handleSubmit}
+                    className="mt-3 tracking-wide font-semibold bg-mitini text-gray-100 w-full py-2 rounded-lg hover:bg-rose-600 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                  >
+                    <span className="ml-2">Register</span>
+                  </button>
+                  {loading ? <LoadingOutlined className="mt-2" /> : <></>}
                   {/* <button
                     onSubmit={handleSubmit}
                     className="mt-3 tracking-wide font-semibold bg-mitini text-gray-100 w-full py-2 rounded-lg hover:bg-rose-600 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
