@@ -312,7 +312,8 @@ const Register = () => {
                   <input
                     onChange={handleImage}
                     type="file"
-                    capture="camera"
+                    capture="user"
+                    accept="image/"
                     required
                     className="pt-4"
                   />
