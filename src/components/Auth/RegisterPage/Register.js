@@ -279,13 +279,23 @@ const Register = () => {
                       <option value="false">No</option>
                     </select>
                   </div>
-                  <span className="text-gray-700 font-bold text-sm">
-                    The payment fee is NRS.3200. You{" "}
-                    <b className="text-gray-700">MUST</b> write your full name
-                    and phone number in the "Remarks" section while processing
-                    the payment and send us the screenshot of the transaction to
-                    our email: mitinimunreg@gmail.com
-                  </span>
+                  <div className="pb-4">
+                    <span className="text-gray-700 font-bold text-sm">
+                      The payment fee is NRS.3200. You{" "}
+                      <b className="text-gray-700">MUST</b> write your full name
+                      and phone number in the "Remarks" section while processing
+                      the payment and send us the screenshot of the transaction
+                      to our email: mitinimunreg@gmail.com.
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <b>
+                        NOTE: Only those who have completed the instructions
+                        mentioned above will be verified as delegates.
+                      </b>
+                    </span>
+                  </div>
                   <img
                     className="pt-4"
                     src="https://i.ibb.co/yWQbp7G/IMG-7206.jpg"
