@@ -313,7 +313,7 @@ const Register = () => {
                     onChange={handleImage}
                     type="file"
                     required
-                    accept="image/png, image/gif, image/jpeg"
+                    value={image}
                     className="pt-4"
                   />
                   <label className="pt-2">
