@@ -30,13 +30,13 @@ const HelpLinks = [
 const ContactLinks = [
   {
     title: "E-mail: mitinimun@gmail.com",
-    link: ""
+    link: "",
   },
   {
     title: "Instagram: mitini.mun",
-    link: "https://www.instagram.com/mitini.mun/"
+    link: "https://www.instagram.com/mitini.mun/",
   },
-]
+];
 
 const Footer = () => {
   return (
@@ -101,14 +101,16 @@ const Footer = () => {
                 <div className="py-8 px-4">
                   <h1 className="text-xl font-bold mb-3">Contact us</h1>
                   <ul className="space-y-3">
-                    {ContactLinks.map((link) => (
-                      <li
-                        key={link.title}
-                        className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400"
-                      >
-                        <a href={link.link}>{link.title}</a>
-                      </li>
-                    ))}
+                    <li
+                      className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400"
+                    >
+                      <a>Email: mitinimun@gmail.com</a>
+                    </li>
+                    <li
+                      className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-400"
+                    >
+                      <a href="https://www.instagram.com/mitini.mun/">Instagram: mitini.mun</a>
+                    </li>
                   </ul>
                 </div>
               </div>
