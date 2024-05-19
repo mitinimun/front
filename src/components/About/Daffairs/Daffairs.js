@@ -19,7 +19,7 @@ const Daffairs = () => {
                 <div className="pb-10 basis-1/2">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/gF5prvW/ABHILOKEET.jpg"
+                      src="https://i.ibb.co/Sc8287q/ABHILOKEET-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -47,7 +47,7 @@ const Daffairs = () => {
                 <div className="pb-10 grid grid-cols-1">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/gF5prvW/ABHILOKEET.jpg"
+                      src="https://i.ibb.co/Sc8287q/ABHILOKEET-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -73,7 +73,7 @@ const Daffairs = () => {
                 <div className="">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/G7FT6TV/BHAVYA.jpg"
+                      src="https://i.ibb.co/5TsnJSx/BHAVYA-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -98,7 +98,7 @@ const Daffairs = () => {
                 <div className="">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/BVcWY29/BINISHA.jpg"
+                      src="https://i.ibb.co/T1SpMMs/BINISHA-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />

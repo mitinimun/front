@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 const OC = () => {
   const SecGenData = [
     {
-      img: "https://i.ibb.co/0nfYDCP/SECRET.jpg",
+      img: "https://i.ibb.co/6PF2fgm/SECTETARIATS.jpg",
       title: "The Secretariats",
       description:
         "Meet our inspiring MUN Secretary-Generals, Vedant and Vashwan, leading us to a remarkable conference experience!",
@@ -15,42 +15,42 @@ const OC = () => {
 
   const OtherData1 = [
     {
-      img: "https://i.ibb.co/NYY00pJ/LOGI.jpg",
+      img: "https://i.ibb.co/hWCxHXZ/LOGISTICS.jpg",
       title: "The Logistics Team",
       description:
         "Say hello to our efficient Logistics Team for this Model United Nations (MUN) conference. They're the backbone of our operations, ensuring smooth and seamless proceedings throughout!",
       link: "/logi",
     },
     {
-      img: "https://i.ibb.co/fS6dxBn/marketing.jpg",
+      img: "https://i.ibb.co/kJjQhBk/MARKETING-1.jpg",
       title: "The Marketing Team",
       description:
         "Meet our stellar Marketing Team! The innovative behind-the-scene strategists who have been building an outstanding digital image of Mitini MUN.",
       link: "/marketing",
     },
     {
-      img: "https://i.ibb.co/4fbNgV2/communications.jpg",
+      img: "https://i.ibb.co/v4n4017/COMMUNICATIONS-1.jpg",
       title: "The Communications Team",
       description:
         "Introducing our vital Communications Team for this Model United Nations (MUN) conference. They ensure a smooth and engaging experience for all!",
       link: "/comms",
     },
     {
-      img: "https://i.ibb.co/C6WfTCp/DEL-AFF.jpg",
+      img: "https://i.ibb.co/35XYHXt/DELEGATE-AFFAIRS.jpg",
       title: "The Delegate Affairs Team",
       description:
         "Introducing our dedicated Delegate Affairs Team for this MUN conference. With their unwavering support, every delegate's journey will be impactful and rewarding!",
       link: "/daffairs",
     },
     {
-      img: "https://i.ibb.co/bJ5V97g/PHOTO.jpg",
+      img: "https://i.ibb.co/yh63c5z/PHOTOGRAPHY-1.jpg",
       title: "The Photography Team",
       description:
         "Say hello to our talented photographers capturing every moment of this Model United Nations (MUN) conference. Their lens will bring our event to life!",
       link: "/photo",
     },
     {
-      img: "https://i.ibb.co/YhYQ2Tr/SIDDHANT.jpg",
+      img: "https://i.ibb.co/yqQ9Skk/EQUITY-OFFICERS.jpg",
       title: "The Equity Officers Team",
       description:
         "Meet our Equity Officers for this Model United Nations (MUN) conference. They ensure fairness and inclusivity, creating a welcoming environment for all participants.",

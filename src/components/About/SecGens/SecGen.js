@@ -17,7 +17,7 @@ const SecGen = () => {
                 <div className="pb-10">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/HDDWqdy/VEDANT-1.jpg"
+                      src="https://i.ibb.co/c3h7RdJ/vedant-3.jpg"
                       className="mx-auto h-[80%] w-[80%]"
                       alt=""
                     />
@@ -46,7 +46,7 @@ const SecGen = () => {
                 <div className="pb-10">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/gTXwTyD/VASHWAN.jpg"
+                      src="https://i.ibb.co/ScgNxjR/VASHWAN-1.jpg"
                       className="mx-auto h-[80%] w-[80%]"
                       alt=""
                     />

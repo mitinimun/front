@@ -77,7 +77,7 @@ const Sponsors = () => {
         </div>
 
         
-        <h2 className="text-4xl text-neutral-500 font-semibold ">
+        <h2 className="text-4xl text-neutral-500 font-semibold pb-7">
           Our Associate Sponsors
         </h2>
         <div className="flex justify-center pb-16">
@@ -91,7 +91,7 @@ const Sponsors = () => {
         </div>
 
 
-        <h2 className="text-4xl text-neutral-500 font-semibold pb-4">
+        <h2 className="text-4xl text-neutral-500 font-semibold pb-7">
           Our Supporting Sponsor
         </h2>
         <div className="flex justify-center pb-10">

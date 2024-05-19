@@ -17,7 +17,7 @@ const Photo = () => {
                 <div className="pb-10">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/y8J1CmX/SUYOG-P.jpg"
+                      src="https://i.ibb.co/cr1HHKD/SUYOG-PHOTO.jpg"
                       className="mx-auto h-[80%] w-[80%]"
                       alt=""
                     />
@@ -45,7 +45,7 @@ const Photo = () => {
                 <div className="pb-10">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/dJYv2Pw/yatra.jpg"
+                      src="https://i.ibb.co/RyzCFq8/YATRA-2.jpg"
                       className="mx-auto h-[80%] w-[80%]"
                       alt=""
                     />

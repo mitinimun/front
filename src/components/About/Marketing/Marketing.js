@@ -19,7 +19,7 @@ const Marketing = () => {
                 <div className="pb-10 basis-1/2">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/M2nkSND/PRATYUSH.jpg"
+                      src="https://i.ibb.co/YBb7yFF/JOSHI.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -53,7 +53,7 @@ const Marketing = () => {
                 <div className="grid grid-cols-1 pb-10">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/M2nkSND/PRATYUSH.jpg"
+                      src="https://i.ibb.co/YBb7yFF/JOSHI.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -85,7 +85,7 @@ const Marketing = () => {
                 <div className="pb-10">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/mXTCzrp/ARNAV.jpg"
+                      src="https://i.ibb.co/1qWHVS3/ARNAV-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -112,7 +112,7 @@ const Marketing = () => {
                 <div className="pb-10">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/Gcsc8BT/RAGHU.jpg"
+                      src="https://i.ibb.co/HYPLtCH/RAGHU-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -141,7 +141,7 @@ const Marketing = () => {
                 <div className="">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/GVXxGJ4/NORIKO.jpg"
+                      src="https://i.ibb.co/R9zBsf8/NORIKO-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -167,7 +167,7 @@ const Marketing = () => {
                 <div className="">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/RgvRHqR/SUYOG-M.jpg"
+                      src="https://i.ibb.co/FnL0njw/SUYOG.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />

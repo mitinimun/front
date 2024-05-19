@@ -19,7 +19,7 @@ const Logi = () => {
                 <div className="pb-10 basis-1/2">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/FnKhGbc/MESHNA.jpg"
+                      src="https://i.ibb.co/ZW3tkRT/MESHNA-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -52,7 +52,7 @@ const Logi = () => {
                 <div className="grid grid-cols-1 pb-10">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/FnKhGbc/MESHNA.jpg"
+                      src="https://i.ibb.co/ZW3tkRT/MESHNA-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -83,7 +83,7 @@ const Logi = () => {
                 <div className="">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/fQB7ZSW/RAJAVI.jpg"
+                      src="https://i.ibb.co/pbC6zbF/RAJAVI-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
@@ -110,7 +110,7 @@ const Logi = () => {
                 <div className="">
                   <div className="overflow-hidden">
                     <img
-                      src="https://i.ibb.co/KDQbS46/ADWAIT.jpg"
+                      src="https://i.ibb.co/gzk4jKV/ADWAIT-1.jpg"
                       className="mx-auto h-[100%] w-[100%]"
                       alt=""
                     />
