@@ -144,7 +144,7 @@ const Register = () => {
             <div>
               <img
                 src="https://i.ibb.co/Yh8R0Yd/mitini-MUN-logo.jpg"
-                className="w-32 mx-auto"
+                className="w-32 mx-auto pt-10"
               />
             </div>
             <div className="mt-5 flex flex-col items-center">
