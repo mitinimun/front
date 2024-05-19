@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { UserContext } from "../../../context/context";
 import Footer from "../../Footer/Footer";
 import { Modal, Avatar } from "antd";
-import { LoadingOutlined } from "@ant-design/icons";
+import { CameraOutlined, LoadingOutlined } from "@ant-design/icons";
 
 const Register = () => {
   const [firstname, setFirstname] = useState("");
@@ -49,8 +49,8 @@ const Register = () => {
       setCommpref2("");
       setCommpref3("");
       setIsVeg("");
-      setImage({});
-      setLoading(false);
+      setImage(null);
+      setLoading(false)
     } catch (err) {
       toast.error(err.response.data);
       setLoading(false);
@@ -60,8 +60,8 @@ const Register = () => {
   const handleImage = async (e) => {
     const file = e.target.files[0];
 
-    if (file.size > 204800) {
-      alert("The file size exceeds 200kb. Please reduce the file size.");
+    if (file.size > 2097152) {
+      alert("The file size exceeds 2mb. Please reduce the file size.");
       e.target.value = "";
     } else {
       let formData = new FormData();
@@ -284,24 +284,48 @@ const Register = () => {
                       The payment fee is NRS.3200. You{" "}
                       <b className="text-gray-700">MUST</b> write your full name
                       and phone number in the "Remarks" section while processing
+                      the payment and upload it in the given field below.
+                    </span>
+                  </div>
+                  {/* <div className="pb-4">
+                    <span className="text-gray-700 font-bold text-sm">
+                      The payment fee is NRS.3200. You{" "}
+                      <b className="text-gray-700">MUST</b> write your full name
+                      and phone number in the "Remarks" section while processing
                       the payment and send us the screenshot of the transaction
                       to our email: mitinimunreg@gmail.com.
                     </span>
-                  </div>
-                  <div>
+                  </div> */}
+                  {/* <div>
                     <span>
                       <b>
                         NOTE: Only those who have completed the instructions
                         mentioned above will be verified as delegates.
                       </b>
                     </span>
-                  </div>
+                  </div> */}
                   <img
                     className="pt-4"
                     src="https://i.ibb.co/yWQbp7G/IMG-7206.jpg"
                     alt=""
                   />
-                  <label className="block text-gray-500 font-semibold">
+                  <input
+                    onChange={handleImage}
+                    type="file"
+                    accept="images/*"
+                    required
+                    className="pt-4"
+                  />
+                  <label className="pt-2">
+                    {image && image.url ? (
+                      <Avatar size={30} src={image.url} className="mt-1" />
+                    ) : uploading ? (
+                      <LoadingOutlined className="mt-2" />
+                    ) : (
+                      <></>
+                    )}
+                  </label>
+                  <label className="block text-gray-500 font-semibold pt-4">
                     <input
                       className="mr-2 leading-tight"
                       type="checkbox"
@@ -315,12 +339,16 @@ const Register = () => {
                       .
                     </span>
                   </label>
-                  <button
-                    onSubmit={handleSubmit}
-                    className="mt-3 tracking-wide font-semibold bg-mitini text-gray-100 w-full py-2 rounded-lg hover:bg-rose-600 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
-                  >
-                    <span className="ml-2">Register</span>
-                  </button>
+                  {uploading ? (
+                    <span>Wait the image is uploading!</span>
+                  ) : (
+                    <button
+                      onSubmit={handleSubmit}
+                      className="mt-3 tracking-wide font-semibold bg-mitini text-gray-100 w-full py-2 rounded-lg hover:bg-rose-600 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                    >
+                      <span className="ml-2">Register</span>
+                    </button>
+                  )}
                   {loading ? <LoadingOutlined className="mt-2" /> : <></>}
                   {/* <button
                     onSubmit={handleSubmit}
