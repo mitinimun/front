@@ -22,6 +22,8 @@ const Register = () => {
   const [state, setState] = useContext(UserContext);
   const [image, setImage] = useState({});
   const [uploading, setUploading] = useState(false);
+  const [prevExp, setPrevExp] = useState("");
+  const [grade, setGrade] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +40,8 @@ const Register = () => {
         commpref3,
         isVeg,
         image,
+        prevExp,
+        grade
       });
       SetOk(data.ok);
       setFirstname("");
@@ -50,7 +54,9 @@ const Register = () => {
       setCommpref3("");
       setIsVeg("");
       setImage(null);
-      setLoading(false)
+      setPrevExp("");
+      setGrade("");
+      setLoading(false);
     } catch (err) {
       toast.error(err.response.data);
       setLoading(false);
@@ -246,7 +252,7 @@ const Register = () => {
                   >
                     Committee Preference 3
                   </label>
-                  <div className="">
+                  <div className="pb-6">
                     <select
                       className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-state"
@@ -260,6 +266,43 @@ const Register = () => {
                       ))}
                     </select>
                   </div>
+
+                  <div className="pb-2">
+                    <label
+                      for="message"
+                      className="block mb-2 text-sm font-medium"
+                    >
+                      Previous MUN experience (in short)
+                    </label>
+                    <textarea
+                      name="prevExp"
+                      value={prevExp}
+                      id="message"
+                      required
+                      rows="4"
+                      onChange={(e) => setPrevExp(e.target.value)}
+                      className="block p-2.5 w-full rounded-lg  bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    ></textarea>
+                  </div>
+
+                  <div className="pb-2">
+                    <label
+                      className="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-5"
+                      for="grade"
+                    >
+                      What grade do you study in currently?
+                    </label>
+                    <input
+                      id="grade"
+                      name="grade"
+                      value={grade}
+                      onChange={(e) => setGrade(e.target.value)}
+                      className="mt-2 w-full px-6 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                      type="number"
+                      required
+                    />
+                  </div>
+
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-5 mb-2"
                     for="grid-state"
