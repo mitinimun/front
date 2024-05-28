@@ -272,15 +272,15 @@ const Register = () => {
                       for="message"
                       className="block mb-2 text-sm font-medium"
                     >
-                      Previous MUN experience (in short)
+                      Previous MUN experience (if any)
                     </label>
                     <textarea
                       name="prevExp"
                       value={prevExp}
                       id="message"
-                      required
                       rows="4"
                       onChange={(e) => setPrevExp(e.target.value)}
+                      placeholder="Number of muns that you have participated in, achievements in those muns, etc"
                       className="block p-2.5 w-full rounded-lg  bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                     ></textarea>
                   </div>
