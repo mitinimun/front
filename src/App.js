@@ -21,6 +21,8 @@ import Equity from "./components/About/Equity/Equity";
 import Committee from "./components/About/Committee/Committee";
 import OCRegister from "./components/Auth/RegisterPage/OCRegister";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Materials from "./components/About/Materials/Materials";
+import Venue from "./components/About/Venue/Venue";
 
 const App = () => {
   return (
@@ -46,6 +48,8 @@ const App = () => {
           <Route path="/photo" element={<Photo />} />
           <Route path="/equity" element={<Equity />} />
           <Route path="/committees" element={<Committee />} />
+          <Route path="/materials" element={<Materials />} />
+          <Route path="/venue" element={<Venue />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>

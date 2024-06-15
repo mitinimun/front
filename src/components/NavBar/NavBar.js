@@ -44,6 +44,8 @@ const NavBar = () => {
     { link: "What is Mitini?", path: "/mitini" },
     { link: "The OC", path: "/oc" },
     { link: "Committees", path: "/committees" },
+    { link: "Venue", path: "/venue" },
+    { link: "Materials", path: "/materials" }
   ];
 
   const loggedInNavItems = [{ link: "Dashboard", path: "/dashboard" }];
