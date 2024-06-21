@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../context/context";
 import AdminDashboard from "./AdminDashboard";
+import DelegateDashboard from "./DelegateDashboard";
 
 const Dashboard = () => {
   const [state, setState] = useContext(UserContext);
@@ -16,7 +17,9 @@ const Dashboard = () => {
           <AdminDashboard />
         </>
       ) : (
-        redirect()
+        <>
+        <DelegateDashboard user={state.user} />
+        </>
       )}
     </div>
   );

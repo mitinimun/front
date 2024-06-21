@@ -47,6 +47,12 @@ const Sponsors = () => {
       description:
         "ad;lfkjasd;lkfja;ldkjf;alkdjf;ld fjakldjf;lakdjf;lkadjfl;ka sdfjalk;djf;ladjf",
     },
+    {
+      img: "https://i.ibb.co/GFKTv4K/67689873-8458-46b5-8214-28914bce455e.jpg",
+      title: "Sabitri International Nepal",
+      description:
+        "ad;lfkjasd;lkfja;ldkjf;alkdjf;ld fjakldjf;lakdjf;lkadjfl;ka sdfjalk;djf;ladjf",
+    },
   ];
 
   const SupportingData = [

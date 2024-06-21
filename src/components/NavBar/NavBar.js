@@ -23,6 +23,10 @@ const NavBar = () => {
     window.location.href = "/register";
   };
 
+  const handleRedirectLogin = () => {
+    window.location.href = "/login";
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -45,7 +49,7 @@ const NavBar = () => {
     { link: "The OC", path: "/oc" },
     { link: "Committees", path: "/committees" },
     { link: "Venue", path: "/venue" },
-    { link: "Materials", path: "/materials" }
+    { link: "Materials", path: "/materials" },
   ];
 
   const loggedInNavItems = [{ link: "Dashboard", path: "/dashboard" }];
@@ -99,7 +103,7 @@ const NavBar = () => {
           </ul>
 
           {/* btn for large devices */}
-          <div className="space-x-12 hidden md:flex items-center">
+          <div className="space-x-4 hidden md:flex items-center">
             {/* <a
               href=""
               className="hidden lg:flex items-center text-mitini hover:text-gray-900"
@@ -114,12 +118,14 @@ const NavBar = () => {
                 Logout
               </button>
             ) : (
-              <button
-                onClick={handleRedirect}
-                className="bg-mitini text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutral-600"
-              >
-                Register
-              </button>
+              <>
+                <button
+                  onClick={handleRedirectLogin}
+                  className="bg-gray-600 text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutral-600"
+                >
+                  Login
+                </button>
+              </>
             )}
           </div>
 
@@ -183,12 +189,14 @@ const NavBar = () => {
               Logout
             </button>
           ) : (
-            <button
-              onClick={handleRedirect}
-              className="bg-gray-400 text-white py-2 px-4 transition-all duration-300 rounded hover:bg-red-200"
-            >
-              Register
-            </button>
+            <>
+              <button
+                onClick={handleRedirectLogin}
+                className="bg-gray-600 text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutral-600"
+              >
+                Login
+              </button>
+            </>
           )}
         </div>
       </nav>

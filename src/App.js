@@ -23,7 +23,11 @@ import OCRegister from "./components/Auth/RegisterPage/OCRegister";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Materials from "./components/About/Materials/Materials";
 import Venue from "./components/About/Venue/Venue";
-
+import Login from "./components/Auth/LoginPage/Login";
+import CreateComm from "./components/Committees/CreateComm";
+import ForgotPassword from "./components/Forgot/ForgotPassword";
+import ResetPass from "./components/Reset/ResetPass";
+ 
 const App = () => {
   return (
     <UserProvider>
@@ -36,7 +40,6 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/mitini" element={<Mitini />} />
           <Route path="/sccsclogimrktngcmnctndffrs/lgn" element={<LoginPage />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/sccsclogimrktngcmnctndffrs/rgstr" element={<OCRegister />} />
           <Route path="/tandc" element={<Terms />} />
           <Route path="/oc" element={<OC />} />
@@ -51,6 +54,10 @@ const App = () => {
           <Route path="/materials" element={<Materials />} />
           <Route path="/venue" element={<Venue />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/login" element={<Login />} /> 
+          <Route path="/create/committee" element={<CreateComm />} />
+          <Route path="/forgot" element={<ForgotPassword />} />
+          <Route path="/reset-password/:resetPasswordToken" element={<ResetPass />} />
         </Routes>
       </BrowserRouter>
     </UserProvider>

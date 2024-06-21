@@ -29,7 +29,7 @@ const Materials = () => {
               <p className="text-2xl text-neutral-700 font-semibold mb-2 pt-10 pb-4">
                 United Nations Security Council
               </p>
-              <a href="/PDF/UNSC.pdf" download>
+              <a href="/PDF/UNSC1.pdf" download>
                 <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow text-center inline-flex items-center">
                   <div className="pr-2">
                     <FaRegFilePdf />
